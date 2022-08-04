@@ -1,0 +1,20 @@
+name: core
+version: '1.0'
+summary: core
+description: |
+  OfflineIMAP is software that downloads […]
+
+confinement: devmode
+base: core18
+
+parts:
+  offlineimap:
+    plugin: python
+    python-version: python2
+    source: https://github.com/snapcraft-docs/core.git
+    stage-packages:
+      - python-six
+
+apps:
+  core:
+    command: bin/core
